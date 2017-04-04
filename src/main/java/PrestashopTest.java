@@ -23,6 +23,7 @@ public class PrestashopTest {
     private static final By LOGIN_BUTTON_LOCATOR = By.className("ladda-button");
     private static final By AVATAR_SMALL_LOCATOR = By.className("employee_avatar_small");
     private static final By ELEMENT_WITH_TITLE_CLASS_LOCATOR = By.className("title");
+    private static final By HEADER_LOGOUT_BUTTON_LOCATOR = By.id("header_logout");
 
     private static final String HEADER_LOGO_XPATH = ".//*[@id='header_logo']";
     private static final String PART_OF_MENU_ELEMENT_XPATH = "//span[contains(text(), \"";
@@ -34,7 +35,7 @@ public class PrestashopTest {
         driver.get(PRESTASHOP_URL);
         loginOnPrestashop(driver);
         driver.findElement(AVATAR_SMALL_LOCATOR).click();
-        driver.findElement(By.id("header_logout")).click();
+        driver.findElement(HEADER_LOGOUT_BUTTON_LOCATOR).click();
 
 
         //case B
